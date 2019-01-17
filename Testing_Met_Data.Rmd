@@ -1,0 +1,40 @@
+---
+title: "Testing out dataset"
+author: "Maggie Klope"
+date: "1/16/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Opening csv in Rstudio
+
+```{r}
+
+library(tidyverse)
+df <- read_csv("MetObjects.csv")
+
+```
+
+Looking at types of data available in the dataframe
+
+```{r}
+
+by_country <- df %>% 
+  select("Object Number", "Object Name", "Country")
+
+
+```
+
+Trying to make a simple UI
+
+```{r}
+install.packages("shiny")
+
+ui <- fluidPage(
+  
+)
+
+```
