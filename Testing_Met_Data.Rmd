@@ -15,7 +15,7 @@ Opening csv in Rstudio
 
 library(tidyverse)
 #file is very large, still need to set up Git LFS in order to upload to Git
-df <- read_csv("C:MetObjects.csv")
+df <- read_csv("MetObjects.csv")
 
 ```
 
@@ -24,7 +24,7 @@ Looking at types of data available in the dataframe
 ```{r}
 
 small_df <- df %>%
-  select("Object Number", "Object Name", "Country", "Artist Alpha Sort", "Medium", "Link Resource") 
+  select("Object Number", "Object Name", "Country", na.rm = TRUE) 
 
 #See types of objects in the dataframe
 levels(small_df$`Object Name`)
@@ -34,5 +34,6 @@ levels(small_df$`Object Name`)
 Testing out types of graphs
 
 ```{r}
+ggplot()
 
 ```
