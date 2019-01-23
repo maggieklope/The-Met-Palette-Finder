@@ -14,7 +14,8 @@ Opening csv in Rstudio
 ```{r}
 
 library(tidyverse)
-df <- read_csv("MetObjects.csv")
+#file is very large, still need to set up Git LFS in order to upload to Git
+df <- read_csv("C:MetObjects.csv")
 
 ```
 
@@ -22,19 +23,16 @@ Looking at types of data available in the dataframe
 
 ```{r}
 
-by_country <- df %>% 
-  select("Object Number", "Object Name", "Country")
+small_df <- df %>%
+  select("Object Number", "Object Name", "Country", "Artist Alpha Sort", "Medium", "Link Resource") 
 
+#See types of objects in the dataframe
+levels(small_df$`Object Name`)
 
 ```
 
-Trying to make a simple UI
+Testing out types of graphs
 
 ```{r}
-install.packages("shiny")
-
-ui <- fluidPage(
-  
-)
 
 ```
